@@ -1,0 +1,17 @@
+authentication
+
+50% REST 50% other stuff
+
+signup
+  what is restful action/url/etc
+  users#create 
+
+login
+logout
+staying logged in 
+
+password => user types in plain text
+password_digest => hashed
+User validations for having pw and it being unique
+
+generate model with attr name, email, password_digest
