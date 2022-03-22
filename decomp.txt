@@ -1,0 +1,25 @@
+allow user to purchase a product
+
+user clicks on 'buy' button for product
+  create request
+takes to page that shows order subtotal and shipping options
+  method to calculate total
+  params to input address and credit info
+takes to page showing final total and 'submit' button
+
+gives user delivery estimate
+
+MVP (min viable product)
+breadth first (simplest way to get it done)
+depth first (1 piece, as deeply as you can)
+
+decomp (do breadth first)
+user buys product
+orders create action  
+  hardcode in controller
+  all attr come from params
+  
+
+deliberate pract
+debugging
+discovery

@@ -54,7 +54,7 @@ Content-Type: application/json
 
 {
   "email": "test@test.com",
-  "password": "password1"
+  "password": "password"
 }
 
 ### Photos create
@@ -67,3 +67,20 @@ Content-Type: application/json
   "width": 640,
   "height": 480
 }
+
+### Orders Create
+POST http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTY4NzF9.hqmovvE3Ks0-ND7zKp_vs_lMs1Y9kY9wIfdQC1x-m5Q
+Content-Type: application/json
+
+{
+  "input_product_id": 1,
+  "input_quantity": 1
+}
+
+### Orders Show
+GET http://localhost:3000/orders/1
+
+### Orders Index
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTY4NzF9.hqmovvE3Ks0-ND7zKp_vs_lMs1Y9kY9wIfdQC1x-m5Q
