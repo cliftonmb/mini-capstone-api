@@ -9,4 +9,4 @@ Product.create!([
   {title: "Another Green Couch", price: 5, image_url: "https://cdn-images.article.com/products/SKU12684/2890x1500/image58197.jpg?fit=max&w=2600&q=60&fm=webp", description: "This couch is not as great as Raven's couch, but it is still a good buy.", in_stock: nil},
   {title: "big couch", price: 1555, image_url: "https://images.pexels.com/photos/4846097/pexels-photo-4846097.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", description: "Large, lovely, lucious couch", in_stock: nil},
   {title: "small shoe", price: 3, image_url: "url", description: "these are small shoes", in_stock: nil}
-])
+])cd ..

@@ -23,3 +23,17 @@ orders create action
 deliberate pract
 debugging
 discovery
+
+products index +!
+carted_products create
+carted_products index
+orders create
+
+Models: 
+CartedProduct user_id:integer product_id:integer quantity_integer status order_id:integer
+
+Order subtotal:float tax:float total:float user_id:integer
+
+Orders
+  has_many :users
+

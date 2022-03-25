@@ -1,14 +1,13 @@
+### Products Index
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
-Content-Type: application/json
-
-pp current_user
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
 
 
-###
+
+### Products Show
 GET http://localhost:3000/products/19.json
 
-###
+### Products Create
 POST http://localhost:3000/products
 content-type: application/json
 
@@ -21,9 +20,10 @@ content-type: application/json
   "input_supplier_id": 2
 }
 
-###
+### Products Update
 PATCH http://localhost:3000/products/16
 content-type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
 
 {
   "input_name": "Demo Drill",
@@ -34,16 +34,16 @@ content-type: application/json
   "input_supplier_id": 1
 }
 
-###
-DELETE http://localhost:3000/products/6
+### Products Destroy
+DELETE http://localhost:3000/products/11
 
 ### Users create (signup)
 POST http://localhost:3000/users
 content-type: application/json
 
 {
-  "name": "Test name",
-  "email": "test@test.com",
+  "name": "Ororo Storm",
+  "email": "ot@email.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -53,13 +53,13 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "ll@gmail",
   "password": "password"
 }
 
 ### Photos create
 POST http://localhost:3000/photos.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
 Content-Type: application/json
 
 {
@@ -70,17 +70,30 @@ Content-Type: application/json
 
 ### Orders Create
 POST http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTY4NzF9.hqmovvE3Ks0-ND7zKp_vs_lMs1Y9kY9wIfdQC1x-m5Q
-Content-Type: application/json
-
-{
-  "input_product_id": 1,
-  "input_quantity": 1
-}
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
 
 ### Orders Show
 GET http://localhost:3000/orders/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
 
 ### Orders Index
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgwNTY4NzF9.hqmovvE3Ks0-ND7zKp_vs_lMs1Y9kY9wIfdQC1x-m5Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
+
+
+### carted_products Create
+POST http://localhost:3000/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
+Content-Type: application/json
+
+{
+  "input_quantity": 3,
+  "input_status": "carted",
+  "input_product_id": 10
+}
+
+### carted_products Index
+GET http://localhost:3000/carted_products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMTk3NTd9.X-2S5RsXWdg8SsA5cTvqOZyjxfsOlfxRW0CF4MJL6Wg
+
+### 

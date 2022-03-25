@@ -15,3 +15,8 @@ password_digest => hashed
 User validations for having pw and it being unique
 
 generate model with attr name, email, password_digest
+
+guest - not logged in
+user - logged in
+admin - new column on users table 
+  add_column :users, :admin, :boolean, default: false

@@ -1,19 +1,22 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
 
   def index
-    orders = Order.all
-    render json: orders
+    if current_user 
+      render json: Order.all
+    else
+      render json: {}, status: :unauthorized
+    end
+
   end
 
   def create 
-    product = Product.find_by(id: params[:input_product_id])
+    HERE I AM. CHECK OUT THE CART AND ORDER METHODS
     order = Order.new(
       user_id: current_user.id,
-      product_id: params[:input_product_id],
-      quantity: params[:input_quantity],
-      subtotal: product.price,
-      tax: product.tax,
-      total: product.total
+      subtotal: cart.subtotal,
+      tax: cart.tax,
+      total: cart.total
     )
     order.save
     render json: order
@@ -25,3 +28,6 @@ class OrdersController < ApplicationController
   end
 
 end
+
+# Authorization
+# process of seeing if 
