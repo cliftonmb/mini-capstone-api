@@ -95,4 +95,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzM
 GET http://localhost:3000/carted_products
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
 
-### 
+### carted_products Destroy
+DELETE http://localhost:3000/carted_products/:id
