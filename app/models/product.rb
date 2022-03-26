@@ -7,6 +7,7 @@ class Product < ApplicationRecord
   validates :description, length: { in: 10..500 }
   validates :in_stock, presence: true
   validates :in_stock, numericality: {greater_than_or_equal_to: 0}
+  
   has_many :images
   belongs_to :supplier
   has_many :category_products

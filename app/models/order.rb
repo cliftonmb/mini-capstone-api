@@ -1,5 +1,6 @@
 class Order < ApplicationRecord
-  
+  has_many :carted_products
+
   def subtotal
     cart = CartedProduct.all
     order_sub_total = 0
@@ -13,7 +14,12 @@ class Order < ApplicationRecord
   end
 
   def total
-    tax + subtotal
+    # tax + subtotal
+    return "hiii"
+  end
+
+  def price
+    Product.first.price
   end
 
 end

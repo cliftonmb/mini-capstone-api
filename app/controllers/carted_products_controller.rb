@@ -11,7 +11,7 @@ class CartedProductsController < ApplicationController
       quantity: params[:input_quantity],
       status: params[:input_status],
       product_id: params[:input_product_id],
-      order_id: params[:input_order_id]
+      order_id: nil
     
     )
     cp.save

@@ -11,15 +11,23 @@ class OrdersController < ApplicationController
   end
 
   def create 
-    HERE I AM. CHECK OUT THE CART AND ORDER METHODS
-    order = Order.new(
-      user_id: current_user.id,
-      subtotal: cart.subtotal,
-      tax: cart.tax,
-      total: cart.total
-    )
-    order.save
-    render json: order
+    user_carted_products = CartedProduct.where(status: "carted")
+    subtotal = 0
+    user_carted_products.each{|carted_product|
+      subtotal += carted_product.price 
+      # carted_product.status = "purchased"
+      # carted_product.order_id = order.id
+    }
+    # order = Order.new(
+    #   user_id: current_user.id,
+    #   subtotal: subtotal,
+    #   tax: subtotal * 0.09,
+    #   total: subtotal + :tax
+    # )
+    # order.save
+
+    render json: subtotal
+
   end
 
   def show
@@ -29,5 +37,7 @@ class OrdersController < ApplicationController
 
 end
 
-# Authorization
-# process of seeing if 
+# * Create a new order with user_id, subtotal, tax, and total (this will require a loop to calculate)
+# * Modify the carted products to change the status to “purchased” and the order_id to the new order’s id
+
+
