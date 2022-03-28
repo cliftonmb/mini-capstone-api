@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   end
 
   def create 
-    user_carted_products = CartedProduct.where(status: "carted")
+    user_carted_products = CartedProduct.where(status: "carted", user_id: current_user.id)
     subtotal = 0
     user_carted_products.each{|carted_product|
       subtotal += (carted_product.price * carted_product.quantity)
@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
     order[:total] = subtotal + order[:tax]
     user_carted_products.each{|carted_product|
       carted_product.order_id = order.id
-      # order.save
+      # carted_product.save
     }
 
     render json: CartedProduct.all

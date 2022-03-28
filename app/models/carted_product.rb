@@ -1,6 +1,6 @@
 class CartedProduct < ApplicationRecord
   # belongs_to :users
-  # belongs_to :products
+  belongs_to :product
   belongs_to :order, optional: true
 
   def price

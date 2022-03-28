@@ -1,7 +1,7 @@
 class CartedProductsController < ApplicationController
   before_action :authenticate_user
   def index
-    cp = CartedProduct.where(:status = "carted")
+    cp = CartedProduct.where(user_id: current_user.id, status: "carted")
     render json: cp.as_json(methods: [:product])
   end
 
@@ -9,7 +9,7 @@ class CartedProductsController < ApplicationController
     cp = CartedProduct.new(
       user_id: current_user.id,
       quantity: params[:input_quantity],
-      status: params[:input_status],
+      status: "carted",
       product_id: params[:input_product_id],
       order_id: nil
     
