@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
 
   def index
     if current_user 
-      render json: Order.all
+      orders = Order.all
+      render json: orders.as_json(methods: [:carted_products])
     else
       render json: {}, status: :unauthorized
     end

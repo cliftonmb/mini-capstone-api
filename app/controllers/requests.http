@@ -1,6 +1,6 @@
 ### Products Index
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 
 
@@ -10,7 +10,7 @@ GET http://localhost:3000/products/19.json
 ### Products Create
 POST http://localhost:3000/products
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 {
   "input_name": "Test Run4",
@@ -24,7 +24,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzM
 ### Products Update
 PATCH http://localhost:3000/products/16
 content-type: application/json 
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 {
   "input_name": "Demo Drill",
@@ -36,7 +36,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzM
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/11
+DELETE http://localhost:3000/products/21
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 ### Users create (signup)
 POST http://localhost:3000/users
@@ -60,7 +61,7 @@ Content-Type: application/json
 
 ### Photos create
 POST http://localhost:3000/photos.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4n
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 {
   "name": "Test name",
@@ -70,20 +71,20 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzM
 
 ### Orders Create
 POST http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 ### Orders Show
 GET http://localhost:3000/orders/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 ### Orders Index
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 
 ### carted_products Create
 POST http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4n
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 {
   "input_quantity": 3,
@@ -93,7 +94,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzM
 
 ### carted_products Index
 GET http://localhost:3000/carted_products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgzMzgzMjd9.HS7-96kUS5PwGvvbRDVh_2jKmbTX4rUuGHzpJzrSSQ4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
 ### carted_products Destroy
-DELETE http://localhost:3000/carted_products/:id
+DELETE http://localhost:3000/carted_products/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y

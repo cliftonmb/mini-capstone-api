@@ -21,4 +21,8 @@ class Order < ApplicationRecord
     Product.first.price
   end
 
+  def carted_products
+    CartedProduct.all
+  end
+
 end

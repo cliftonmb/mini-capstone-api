@@ -1,8 +1,8 @@
 class CartedProductsController < ApplicationController
   before_action :authenticate_user
   def index
-    cp = CartedProduct.all
-    render json: cp
+    cp = CartedProduct.where(:status = "carted")
+    render json: cp.as_json(methods: [:product])
   end
 
   def create
@@ -22,6 +22,7 @@ class CartedProductsController < ApplicationController
     carted_product = CartedProduct.find_by(id: params[:id])
     # carted_product.delete
     carted_product.status = "removed"
+    carted_product.save
     render json: {message: "Product removed from cart"}
   end
 
