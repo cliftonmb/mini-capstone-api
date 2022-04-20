@@ -5,18 +5,18 @@ User.create!([
   {name: "Chas", email: "chas@email", password_digest: "$2a$12$qOQ0EtZOGD3nQhlCDlvghevhNHLX80FkiU6f0xmClk52zkJM10gIe", admin: false}
   ])
   
-  Supplier.create!([
+Supplier.create!([
     {name: "All My Furnitute", email: "amf@gm.com", phone_number: "1235555555"},
     {name: "Biggo Bigs", email: "bigs@gm.com", phone_number: "1235555456"}
   ])
   
-  Category.create!([
+Category.create!([
     {name: "Furniture"},
     {name: "Technology and Electronics"},
     {name: "Personal Care Items"}
   ])
   
-  Product.create!([
+Product.create!([
     {name: "Test Run2", price: 3, description: "testing testing test", in_stock: 5, supplier_id: 2},
     {name: "Test Run4", price: 5, description: "testing testing test", in_stock: 5, supplier_id: 2},
     {name: "Figurine", price: 55, description: "really strong material", in_stock: 5, supplier_id: 1},
@@ -29,9 +29,9 @@ User.create!([
     {name: "Blanket", price: 55, description: "keeps you warm!", in_stock: 5, supplier_id: 2},
     {name: "Cool Thing", price: 5, description: "this is doing what it needs to do", in_stock: 5, supplier_id: 2},
     {name: "Lunch Box", price: 23, description: "Really, super fancy lunch box for lunches.", in_stock: 5, supplier_id: 2},
-    {name: "Cool Blanket", price: 3, description: "these are big shoes", in_stock: 5, supplier_id: nil},
-    {name: "Small-ish Blanket", price: 3, description: "these are big shoes", in_stock: 5, supplier_id: nil},
-    {name: "Small-ish Blanket Blue", price: 3, description: "these are big shoes", in_stock: 5, supplier_id: nil},
+    {name: "Cool Blanket", price: 3, description: "these are big shoes", in_stock: 5, supplier_id: 2},
+    {name: "Small-ish Blanket", price: 3, description: "these are big shoes", in_stock: 5, supplier_id: 2},
+    {name: "Small-ish Blanket Blue", price: 3, description: "these are big shoes", in_stock: 5, supplier_id: 2},
     {name: "Small Blanket Dark Blue", price: 3, description: "Blue blanket. Cofmy", in_stock: 5, supplier_id: 2},
     {name: "Demo Drill", price: 65, description: "Drill things, make a toy car?!", in_stock: 5, supplier_id: 1},
     {name: "Test Run", price: 3, description: "testing testing test", in_stock: 5, supplier_id: 2},
