@@ -5,6 +5,17 @@ User.create!([
   {name: "Chas", email: "chas@email", password_digest: "$2a$12$qOQ0EtZOGD3nQhlCDlvghevhNHLX80FkiU6f0xmClk52zkJM10gIe", admin: false}
   ])
   
+  Supplier.create!([
+    {name: "All My Furnitute", email: "amf@gm.com", phone_number: "1235555555"},
+    {name: "Biggo Bigs", email: "bigs@gm.com", phone_number: "1235555456"}
+  ])
+  
+  Category.create!([
+    {name: "Furniture"},
+    {name: "Technology and Electronics"},
+    {name: "Personal Care Items"}
+  ])
+  
   Product.create!([
     {name: "Test Run2", price: 3, description: "testing testing test", in_stock: 5, supplier_id: 2},
     {name: "Test Run4", price: 5, description: "testing testing test", in_stock: 5, supplier_id: 2},
@@ -41,15 +52,6 @@ Image.create!([
   {url: "httpherehere", product_id: 21},
   {url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_oT2eciScT-YsV3NZPzFWBycJ7OhEKLdQ80dhc7oJlmIUVrfgwUOyJc04WF_U8JSvd8&usqp=CAU", product_id: 22},
   {url: "httpherehere", product_id: 22}
-])
-Category.create!([
-  {name: "Furniture"},
-  {name: "Technology and Electronics"},
-  {name: "Personal Care Items"}
-])
-Supplier.create!([
-  {name: "All My Furnitute", email: "amf@gm.com", phone_number: "1235555555"},
-  {name: "Biggo Bigs", email: "bigs@gm.com", phone_number: "1235555456"}
 ])
 CartedProduct.create!([
   {user_id: 2, product_id: 19, quantity: 3, status: "carted", order_id: nil, product: nil}
