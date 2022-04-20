@@ -1,4 +1,4 @@
-### Products Index
+### Products Indexcd 
 GET http://localhost:3000/products.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDg1NzA2NjJ9.rHpNdNk2yGEBodmMfIWyvRmAIjq3M6nYCsixRVfUw7Y
 
